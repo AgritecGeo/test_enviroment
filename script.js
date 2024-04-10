@@ -29,6 +29,7 @@ function parseCSV(csvText) {
 function mostrarImagenes(data) {
     const imgContainer = document.getElementById('img-container');
     imgContainer.innerHTML = '';
+    window.imagenesFiltradas = data; // Almacenar las imágenes filtradas para su uso en guardarComentario.
 
     data.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
@@ -52,20 +53,19 @@ function filtrarPorPais() {
 }
 
 function guardarComentario(index) {
-    const imagen = window.imagenes[index];
-    const imgBox = document.querySelectorAll('.img-box')[index];
-    const comentario = imgBox.querySelector('textarea').value;
+    const imagen = window.imagenesFiltradas ? window.imagenesFiltradas[index] : window.imagenes[index];
+    const comentario = document.querySelectorAll('.img-box')[index].querySelector('textarea').value;
     const evaluador = document.getElementById('evaluador').value;
     const fecha = new Date().toISOString();
 
-    const datosCSV = `Nombre Imagen,País,Fecha,Comentario,Evaluador\n"${imagen.id}","${imagen.pais}","${fecha}","${comentario}","${evaluador}"`;
+    const datosCSV = `Nombre Imagen,País,Fecha,Comentario,Evaluador\n"${imagen['id']}","${imagen['pais']}","${fecha}","${comentario}","${evaluador}"`;
 
     const blob = new Blob([datosCSV], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement('a');
     a.href = url;
-    a.download = `evaluacion_${imagen.id}.csv`; // Asegura que el nombre del archivo sea único
+    a.download = `evaluacion_${imagen['id']}.csv`; // Asegura que el nombre del archivo sea único
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
