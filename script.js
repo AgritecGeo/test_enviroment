@@ -62,10 +62,10 @@ function guardarComentario(index) {
 
     const blob = new Blob([datosCSV], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
-    
+
     const a = document.createElement('a');
     a.href = url;
-    a.download = `evaluacion_${imagen.id}.csv`;
+    a.download = `evaluacion_${imagen.id}.csv`; // Asegura que el nombre del archivo sea único
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
