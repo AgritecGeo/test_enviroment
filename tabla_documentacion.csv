@@ -1,0 +1,613 @@
+id,pais,cultivo
+ID_1706886541043,Colombia,potato
+ID_1706905924273,Colombia,potato
+ID_1706906519353,Colombia,potato
+ID_1706906585880,Colombia,potato
+ID_1706907994076,Colombia,potato
+ID_1707167291988,Honduras,bean
+ID_1707167766933,Honduras,bean
+ID_1707216803822,Colombia,potato
+ID_1707216885757,Colombia,onion
+ID_1707216990465,Colombia,potato
+ID_1707217669995,Colombia,potato
+ID_1707337378022,Honduras,tomato
+ID_1707341020081,Honduras,coffee
+ID_1707413124340,Colombia,potato
+ID_1707413601871,Colombia,potato
+ID_1707413701629,Colombia,potato
+ID_1707413751241,Colombia,potato
+ID_1707413920931,Colombia,potato
+ID_1707414435887,Colombia,tomato
+ID_1707414816827,Colombia,onion
+ID_1707442674510,Colombia,maize
+ID_1707442766280,Colombia,maize
+ID_1707446428968,Colombia,maize
+ID_1707494912671,Colombia,coffee
+ID_1707495315474,Colombia,coffee
+ID_1707495516825,Colombia,potato
+ID_1707503099922,Colombia,tomato
+ID_1707529700369,Colombia,tomato
+ID_1707529772899,Colombia,tomato
+ID_1707529870811,Colombia,potato
+ID_1707575590884,Colombia,tomato
+ID_1707576095541,Colombia,tomato
+ID_1707576159792,Colombia,tomato
+ID_1707576451722,Colombia,default
+ID_1707741909539,Colombia,coffee
+ID_1707747270968,Colombia,coffee
+ID_1707747556038,Colombia,coffee
+ID_1707752855102,Colombia,eggplant
+ID_1707757725797,Colombia,potato
+ID_1707779015043,Colombia,potato
+ID_1707779862232,Colombia,onion
+ID_1707780110116,Colombia,potato
+ID_1707781160763,Colombia,onion
+ID_1707781491833,Colombia,potato
+ID_1707792827045,Costa Rica,onion
+ID_1707827088702,Colombia,maize
+ID_1707827406497,Colombia,maize
+ID_1707832573926,Colombia,potato
+ID_1707832844783,Colombia,potato
+ID_1707837403712,Guatemala,potato
+ID_1707837856536,Colombia,potato
+ID_1707838081790,Colombia,potato
+ID_1707838223118,Colombia,potato
+ID_1707838311789,Colombia,potato
+ID_1707838454346,Colombia,potato
+ID_1707838522491,Colombia,potato
+ID_1707838748332,Colombia,potato
+ID_1707838894656,Colombia,potato
+ID_1707841173467,Colombia,coffee
+ID_1707841490254,Colombia,coffee
+ID_1707846193756,Colombia,maize
+ID_1707856487938,Colombia,tomato
+ID_1707856487938,Colombia,tomato
+ID_1707870564019,Colombia,maize
+ID_1707887294864,Colombia,maize
+ID_1707918954695,Colombia,potato
+ID_1707919040669,Colombia,potato
+ID_1707919179909,Colombia,potato
+ID_1707919263671,Colombia,potato
+ID_1707919396748,Colombia,potato
+ID_1707920059338,Colombia,potato
+ID_1707924483877,Colombia,coffee
+ID_1707926896702,Colombia,maize
+ID_1707927143842,Colombia,maize
+ID_1707927254373,Colombia,maize
+ID_1707928335099,Colombia,maize
+ID_1707928434002,Colombia,maize
+ID_1707928727525,Colombia,maize
+ID_1707928799550,Colombia,potato
+ID_1707933085338,Colombia,maize
+ID_1707935269208,Honduras,coffee
+ID_1707935339869,Honduras,tomato
+ID_1707935451672,Colombia,maize
+ID_1707935627310,Honduras,pepper
+ID_1707936355882,Honduras,potato
+ID_1707940262052,Honduras,coffee
+ID_1707941098471,Colombia,potato
+ID_1707941686519,Colombia,default
+ID_1707941856489,Colombia,default
+ID_1707942227325,Colombia,potato
+ID_1707942333428,Colombia,default
+ID_1707942870667,Honduras,tomato
+ID_1707943074521,Colombia,maize
+ID_1707943146403,Colombia,default
+ID_1707948149858,Honduras,pepper
+ID_1707949601900,Panamá,maize
+ID_1707949905845,Colombia,tomato
+ID_1707971410088,Honduras,tomato
+ID_1707971699437,Honduras,tomato
+ID_1708002247071,Colombia,eggplant
+ID_1708002466035,Colombia,eggplant
+ID_1708002670043,Guatemala,tomato
+ID_1708006770361,Colombia,maize
+ID_1708006904814,Colombia,maize
+ID_1708007311807,Colombia,maize
+ID_1708007899499,Guatemala,onion
+ID_1708009287393,Guatemala,onion
+ID_1708039674622,Guatemala,maize
+ID_1708039845684,Honduras,bean
+ID_1708039784222,Guatemala,potato
+ID_1708039784222,Guatemala,potato
+ID_1708040470211,Guatemala,potato
+ID_1708040662675,Guatemala,cabbage
+ID_1708040778038,Honduras,pepper
+ID_1708040778038,Honduras,pepper
+ID_1708040876878,Guatemala,tomato
+ID_1708042014656,Guatemala,tomato
+ID_1708042523323,Guatemala,tomato
+ID_1708042755772,Guatemala,tomato
+ID_1708043842866,Honduras,pepper
+ID_1708044311872,Guatemala,maize
+ID_1708044505140,Guatemala,tomato
+ID_1708044626356,Guatemala,pepper
+ID_1708044719144,Guatemala,tomato
+ID_1708045203388,Guatemala,tomato
+ID_1708045347191,Guatemala,pepper
+ID_1708045626735,Guatemala,pepper
+ID_1708045561666,Panamá,pepper
+ID_1708045901244,Guatemala,tomato
+ID_1708045861012,Panamá,tomato
+ID_1708046330546,Panamá,onion
+ID_1708046581389,Guatemala,pepper
+ID_1708046468578,Colombia,cucumber
+ID_1708047199679,Colombia,maize
+ID_1708048615222,Colombia,eggplant
+ID_1708050115006,Colombia,maize
+ID_1708050970412,Colombia,maize
+ID_1708051275516,Colombia,coffee
+ID_1708051539737,Colombia,coffee
+ID_1708052727354,Honduras,pepper
+ID_1708053124123,Honduras,tomato
+ID_1708053298660,Honduras,pepper
+ID_1708053463027,Honduras,tomato
+ID_1708053775776,Honduras,tomato
+ID_1708053883541,Honduras,tomato
+ID_1708054094358,Honduras,tomato
+ID_1708054345671,Honduras,tomato
+ID_1708054699382,Honduras,pepper
+ID_1708055944297,Honduras,pepper
+ID_1708079629529,Guatemala,tomato
+ID_1708080039202,Guatemala,tomato
+ID_1708080039202,Guatemala,tomato
+ID_1708080621925,Guatemala,tomato
+ID_1708081471009,Guatemala,potato
+ID_1708082445895,Guatemala,tomato
+ID_1708081471009,Guatemala,potato
+ID_1708082945447,Guatemala,tomato
+ID_1708083467438,Guatemala,cucumber
+ID_1708082445895,Guatemala,tomato
+ID_1708087992409,Colombia,potato
+ID_1708088062601,Colombia,potato
+ID_1708088185801,Colombia,potato
+ID_1708088641129,Honduras,tomato
+ID_1708088825398,Guatemala,bean
+ID_1708091904545,Guatemala,coffee
+ID_1708094045858,Guatemala,tomato
+ID_1708094760935,Guatemala,potato
+ID_1708095286741,Panamá,onion
+ID_1708095816341,Guatemala,tomato
+ID_1708096788427,Guatemala,maize
+ID_1708096946999,Guatemala,maize
+ID_1708096799395,Guatemala,cabbage
+ID_1708097465824,Guatemala,cauliflower
+ID_1708097696729,Guatemala,tomato
+ID_1708098129233,Guatemala,tomato
+ID_1708098447844,Guatemala,tomato
+ID_1708098809792,Guatemala,maize
+ID_1708098961445,El Salvador,cucumber
+ID_1708099281602,Guatemala,maize
+ID_1708099207588,Guatemala,onion
+ID_1708099731950,Guatemala,onion
+ID_1708099780441,Guatemala,onion
+ID_1708099896309,Guatemala,potato
+ID_1708100207411,Guatemala,coffee
+ID_1708100564077,Guatemala,onion
+ID_1708100671298,Guatemala,coffee
+ID_1708100397474,Guatemala,tomato
+ID_1708100750587,Nicaragua,maize
+ID_1708101043534,Guatemala,onion
+ID_1708100122830,Guatemala,tomato
+ID_1708100898960,Guatemala,onion
+ID_1708101236260,Guatemala,tomato
+ID_1708101594460,Guatemala,tomato
+ID_1708101801990,Guatemala,maize
+ID_1708101952955,Guatemala,maize
+ID_1708102175608,Guatemala,maize
+ID_1708102953209,Guatemala,maize
+ID_1708103702179,Guatemala,tomato
+ID_1708104155003,Guatemala,maize
+ID_1708104453253,Guatemala,tomato
+ID_1708104458188,Guatemala,tomato
+ID_1708105951898,Guatemala,tomato
+ID_1708106329451,Guatemala,coffee
+ID_1708106498428,Nicaragua,rice
+ID_1708106835820,Guatemala,tomato
+ID_1708107636610,Nicaragua,rice
+ID_1708107758902,Nicaragua,rice
+ID_1708107846512,Nicaragua,rice
+ID_1708108185665,Nicaragua,rice
+ID_1708108339924,Nicaragua,rice
+ID_1708108992346,Nicaragua,rice
+ID_1708109066853,Nicaragua,rice
+ID_1708109202347,Nicaragua,rice
+ID_1708109162195,Guatemala,maize
+ID_1708109254556,Nicaragua,rice
+ID_1708109337964,Nicaragua,rice
+ID_1708109408088,Guatemala,maize
+ID_1708109542079,Nicaragua,rice
+ID_1708109639030,Nicaragua,rice
+ID_1708109684042,Nicaragua,rice
+ID_1708109771415,Nicaragua,rice
+ID_1708109841470,Nicaragua,rice
+ID_1708109916996,Nicaragua,rice
+ID_1708109628106,Guatemala,maize
+ID_1708110065524,Nicaragua,rice
+ID_1708110189069,Nicaragua,rice
+ID_1708110273269,Nicaragua,rice
+ID_1708110407823,Nicaragua,rice
+ID_1708110485408,Guatemala,default
+ID_1708111856076,Guatemala,default
+ID_1708111974706,Guatemala,default
+ID_1708112075315,El Salvador,coffee
+ID_1708112256424,El Salvador,maize
+ID_1708112354138,El Salvador,maize
+ID_1708112540324,Nicaragua,tomato
+ID_1708113943288,Nicaragua,tomato
+ID_1708114496875,El Salvador,maize
+ID_1708114582813,Nicaragua,tomato
+ID_1708114809824,Nicaragua,tomato
+ID_1708114774199,Nicaragua,tomato
+ID_1708115034464,Guatemala,maize
+ID_1708114917950,Guatemala,cabbage
+ID_1708115108042,Nicaragua,rice
+ID_1708116182125,Nicaragua,onion
+ID_1708116530262,Guatemala,coffee
+ID_1708116907029,Guatemala,maize
+ID_1708116907029,Guatemala,maize
+ID_1708117189709,Guatemala,default
+ID_1708117557431,Guatemala,potato
+ID_1708118727861,Guatemala,coffee
+ID_1708118831856,Nicaragua,rice
+ID_1708119585440,Guatemala,maize
+ID_1708120714571,Nicaragua,coffee
+ID_1708120623557,Guatemala,tomato
+ID_1708121380947,Guatemala,bean
+ID_1708122907158,Guatemala,bean
+ID_1708122140887,Nicaragua,coffee
+ID_1708123579437,Guatemala,tomato
+ID_1708123464605,Nicaragua,rice
+ID_1708124780050,Colombia,maize
+ID_1708126954764,Guatemala,onion
+ID_1708128387285,Nicaragua,maize
+ID_1708128054094,Guatemala,tomato
+ID_1708128054094,Guatemala,tomato
+ID_1708129137520,Guatemala,onion
+ID_1708129484420,Nicaragua,tomato
+ID_1708129831456,Nicaragua,tomato
+ID_1708130287439,Nicaragua,tomato
+ID_1708131648800,Guatemala,maize
+ID_1708110991844,Guatemala,cucumber
+ID_1708132434072,Guatemala,tomato
+ID_1708132663196,Guatemala,maize
+ID_1708182631885,Nicaragua,default
+ID_1708181914403,Guatemala,coffee
+ID_1708183656631,Guatemala,coffee
+ID_1708184619318,Nicaragua,pepper
+ID_1708184778747,Guatemala,coffee
+ID_1708185227847,Nicaragua,maize
+ID_1708185489202,Nicaragua,pepper
+ID_1708184556868,Guatemala,coffee
+ID_1708185622894,Nicaragua,pepper
+ID_1708185757417,Nicaragua,tomato
+ID_1708185960207,Nicaragua,tomato
+ID_1708185687137,Guatemala,coffee
+ID_1708202960420,Guatemala,coffee
+ID_1708202781671,Nicaragua,tomato
+ID_1708206122273,Nicaragua,tomato
+ID_1708212967402,Nicaragua,tomato
+ID_1708213165892,Nicaragua,maize
+ID_1708214985209,Colombia,coffee
+ID_1708216916075,Nicaragua,maize
+ID_1708217062566,Nicaragua,maize
+ID_1708217248035,Nicaragua,tomato
+ID_1708263220819,Costa Rica,pepper
+ID_1708263975259,Costa Rica,tomato
+ID_1708264264900,Costa Rica,pepper
+ID_1708264868690,Costa Rica,pepper
+ID_1708266846204,Costa Rica,coffee
+ID_1708290929262,Nicaragua,pepper
+ID_1708291110748,Nicaragua,pepper
+ID_1708301659200,Panamá,onion
+ID_1708349647417,Colombia,maize
+ID_1708349786317,Colombia,maize
+ID_1708368426847,Honduras,coffee
+ID_1708368490312,Honduras,potato
+ID_1708368626476,Honduras,potato
+ID_1708368706543,Honduras,onion
+ID_1708368766036,Honduras,coffee
+ID_1708370547909,Honduras,cucumber
+ID_1708360227973,Honduras,maize
+ID_1708377199302,Honduras,maize
+ID_1708377252409,Honduras,maize
+ID_1708378414504,Honduras,maize
+ID_1708378482705,Honduras,maize
+ID_1708378695840,Honduras,maize
+ID_1708378768861,Honduras,coffee
+ID_1708378865457,Honduras,maize
+ID_1708378970622,Honduras,bean
+ID_1708384470419,Honduras,coffee
+ID_1708384737976,Honduras,maize
+ID_1708385215772,Honduras,maize
+ID_1708385568871,Honduras,maize
+ID_1708385788109,Honduras,maize
+ID_1708385896685,Honduras,maize
+ID_1708396211203,Nicaragua,cauliflower
+ID_1708397362868,Nicaragua,potato
+ID_1708398196382,Nicaragua,default
+ID_1708398341435,Nicaragua,potato
+ID_1708439923038,Nicaragua,tomato
+ID_1708440373527,Nicaragua,tomato
+ID_1708443166573,Nicaragua,maize
+ID_1708452468054,El Salvador,default
+ID_1708453327409,Nicaragua,tomato
+ID_1708456600464,Nicaragua,tomato
+ID_1708456895465,Nicaragua,tomato
+ID_1708458471539,Nicaragua,tomato
+ID_1708459792162,Panamá,onion
+ID_1708459597057,Honduras,maize
+ID_1708459941563,Honduras,maize
+ID_1708460320060,Honduras,maize
+ID_1708460583661,Honduras,maize
+ID_1708460762467,Honduras,bean
+ID_1708460978271,Honduras,bean
+ID_1708461174023,Honduras,bean
+ID_1708461174023,Honduras,bean
+ID_1708519179078,Panamá,coffee
+ID_1708527832848,Panamá,tomato
+ID_1708527028086,Costa Rica,potato
+ID_1708528341623,Panamá,tomato
+ID_1708528677240,Panamá,pepper
+ID_1708528944619,Panamá,onion
+ID_1708529378160,Panamá,onion
+ID_1708529728426,Panamá,onion
+ID_1708527028086,Costa Rica,potato
+ID_1708533812075,Costa Rica,tomato
+ID_1708533812075,Costa Rica,tomato
+ID_1708553655038,Costa Rica,default
+ID_1708557525159,Costa Rica,maize
+ID_1708558774063,Costa Rica,maize
+ID_1708562992811,Honduras,tomato
+ID_1708562992811,Honduras,tomato
+ID_1708564050780,Nicaragua,default
+ID_1708564382404,Nicaragua,maize
+ID_1708569540069,Honduras,tomato
+ID_1708569750010,Honduras,pepper
+ID_1708570109838,Honduras,coffee
+ID_1708571426337,Costa Rica,coffee
+ID_1708571949883,Costa Rica,coffee
+ID_1708572666790,Costa Rica,coffee
+ID_1708573691121,Costa Rica,coffee
+ID_1708573929843,Costa Rica,coffee
+ID_1708575319862,Costa Rica,coffee
+ID_1708575319862,Costa Rica,coffee
+ID_1708576238697,Costa Rica,maize
+ID_1708576649236,Costa Rica,tomato
+ID_1708613004681,Nicaragua,bean
+ID_1708615827672,Nicaragua,maize
+ID_1708615988922,Nicaragua,maize
+ID_1708616297730,Nicaragua,bean
+ID_1708616570040,Nicaragua,maize
+ID_1708616536041,Nicaragua,coffee
+ID_1708617034386,Nicaragua,coffee
+ID_1708617281093,Nicaragua,maize
+ID_1708618438029,Honduras,tomato
+ID_1708622879046,Honduras,tomato
+ID_1708622879046,Honduras,tomato
+ID_1708649587329,Panamá,pepper
+ID_1708655454842,Honduras,tomato
+ID_1708655546727,Honduras,pepper
+ID_1708655747011,Honduras,tomato
+ID_1708656964520,Nicaragua,pepper
+ID_1708714709902,Panamá,onion
+ID_1708715063989,Panamá,cucumber
+ID_1708715237384,Panamá,coffee
+ID_1708715342384,Panamá,potato
+ID_1708715706251,Nicaragua,onion
+ID_1708717462172,Honduras,coffee
+ID_1708717462172,Honduras,coffee
+ID_1708712688404,Costa Rica,zucchini
+ID_1708920278243,Honduras,coffee
+ID_1708964727320,Honduras,pepper
+ID_1708990062793,Honduras,maize
+ID_1709060058507,Panamá,pepper
+ID_1709069850986,Panamá,maize
+ID_1709070072460,Panamá,rice
+ID_1709070097515,Panamá,rice
+ID_1709070435797,Panamá,rice
+ID_1709080130698,Nicaragua,bean
+ID_1709080560409,Nicaragua,bean
+ID_1709080560409,Nicaragua,bean
+ID_1709081395650,Nicaragua,onion
+ID_1709081744568,Nicaragua,pepper
+ID_1709082096028,Nicaragua,pepper
+ID_1709082538046,Nicaragua,pepper
+ID_1709129574098,El Salvador,default
+ID_1709129574098,El Salvador,default
+ID_1709130147837,El Salvador,coffee
+ID_1709131448172,Panamá,coffee
+ID_1709131389687,Panamá,onion
+ID_1709141787240,Panamá,pepper
+ID_1709142745234,Panamá,pepper
+ID_1709142633002,Honduras,coffee
+ID_1709147033186,Panamá,onion
+ID_1709147169023,Panamá,onion
+ID_1709147456090,Panamá,onion
+ID_1709147612891,Panamá,onion
+ID_1709147834667,Panamá,onion
+ID_1709148999755,Nicaragua,zucchini
+ID_1709149332856,Nicaragua,pepper
+ID_1709151683699,Panamá,rice
+ID_1709174796799,Nicaragua,tomato
+ID_1709175054807,Nicaragua,tomato
+ID_1709176021148,Nicaragua,tomato
+ID_1709176256309,Nicaragua,tomato
+ID_1709176381087,Nicaragua,pepper
+ID_1709176530901,Nicaragua,tomato
+ID_1709219271234,Costa Rica,tomato
+ID_1709219810086,Costa Rica,cauliflower
+ID_1709220989573,Honduras,pepper
+ID_1709221796394,Nicaragua,bean
+ID_1709224084660,Nicaragua,maize
+ID_1709226033254,Nicaragua,tomato
+ID_1709226198528,Nicaragua,tomato
+ID_1709226287085,Nicaragua,tomato
+ID_1709227007033,Nicaragua,cabbage
+ID_1709226860579,Nicaragua,bean
+ID_1709229643410,Nicaragua,coffee
+ID_1709230274036,Nicaragua,coffee
+ID_1709238300700,Panamá,coffee
+ID_1709239082893,Panamá,pepper
+ID_1709246071402,Panamá,coffee
+ID_1709302933343,El Salvador,tomato
+ID_1709313366632,Panamá,coffee
+ID_1709316587980,El Salvador,maize
+ID_1709323484054,Panamá,onion
+ID_1709329380411,Costa Rica,coffee
+ID_1709329652656,Costa Rica,coffee
+ID_1709330400959,Costa Rica,coffee
+ID_1709345050601,Panamá,coffee
+ID_1709346477684,Nicaragua,maize
+ID_1709346637488,Nicaragua,maize
+ID_1709346786060,Nicaragua,maize
+ID_1709347039564,Nicaragua,cabbage
+ID_1709484280648,Honduras,maize
+ID_1709484438495,Honduras,maize
+ID_1709510875983,Honduras,tomato
+ID_1709594343909,Panamá,coffee
+ID_1709640604156,Panamá,coffee
+ID_1709640919081,Panamá,potato
+ID_1709641083830,Panamá,potato
+ID_1709654411467,El Salvador,tomato
+ID_1709672900122,El Salvador,tomato
+ID_1709673089317,El Salvador,tomato
+ID_1709673639894,El Salvador,maize
+ID_1709673834597,El Salvador,maize
+ID_1709678745915,El Salvador,maize
+ID_1709678871673,El Salvador,zucchini
+ID_1709678987047,El Salvador,bean
+ID_1709679057848,El Salvador,bean
+ID_1709679116740,El Salvador,cucumber
+ID_1709679482122,El Salvador,pepper
+ID_1709679608956,El Salvador,tomato
+ID_1709680160780,El Salvador,cucumber
+ID_1709680301799,El Salvador,tomato
+ID_1709680250042,El Salvador,cucumber
+ID_1709680367549,El Salvador,tomato
+ID_1709680636112,El Salvador,tomato
+ID_1709680878204,El Salvador,pepper
+ID_1709681054188,El Salvador,coffee
+ID_1709681277348,El Salvador,cucumber
+ID_1709681306192,El Salvador,maize
+ID_1709681306192,El Salvador,maize
+ID_1709681786171,El Salvador,coffee
+ID_1709695347463,Nicaragua,maize
+ID_1709695527426,Nicaragua,tomato
+ID_1709695689898,Nicaragua,tomato
+ID_1709695846059,Nicaragua,tomato
+ID_1709695846059,Nicaragua,tomato
+ID_1709696210208,Nicaragua,tomato
+ID_1709701715097,Panamá,coffee
+ID_1709747688785,Panamá,cabbage
+ID_1709747688785,Panamá,cabbage
+ID_1709749356104,Nicaragua,tomato
+ID_1709749496857,Nicaragua,tomato
+ID_1709749624898,Nicaragua,tomato
+ID_1709750961380,Panamá,coffee
+ID_1709751470283,El Salvador,default
+ID_1709751663257,El Salvador,tomato
+ID_1709751789243,El Salvador,default
+ID_1709751916894,El Salvador,default
+ID_1709752092815,El Salvador,default
+ID_1709752222457,El Salvador,default
+ID_1709752388974,El Salvador,default
+ID_1709752541977,El Salvador,default
+ID_1709752811336,El Salvador,default
+ID_1709750961380,Panamá,coffee
+ID_1709750961380,Panamá,coffee
+ID_1709820534885,El Salvador,potato
+ID_1709820717226,El Salvador,cabbage
+ID_1709820808354,El Salvador,tomato
+ID_1709859591658,Honduras,cucumber
+ID_1709860062975,Honduras,tomato
+ID_1709860786281,Honduras,cabbage
+ID_1709910982497,Panamá,tomato
+ID_1709911183747,Panamá,tomato
+ID_1709911304037,Panamá,tomato
+ID_1709911304037,Panamá,tomato
+ID_1709911729037,Panamá,tomato
+ID_1709912053308,Panamá,tomato
+ID_1709912701824,Panamá,tomato
+ID_1709913287086,Panamá,tomato
+ID_1709923710612,Panamá,tomato
+ID_1709923802399,Panamá,onion
+ID_1709924019729,Panamá,onion
+ID_1709924153890,Panamá,onion
+ID_1709924312861,Panamá,tomato
+ID_1709928806247,Panamá,onion
+ID_1709928909495,Panamá,onion
+ID_1709929138331,Panamá,onion
+ID_1709929349348,Panamá,onion
+ID_1709929649059,Panamá,onion
+ID_1709931727497,Panamá,coffee
+ID_1709931909356,Panamá,coffee
+ID_1709932196753,Panamá,potato
+ID_1710024994938,Nicaragua,zucchini
+ID_1710025347049,Nicaragua,zucchini
+ID_1710108702813,Nicaragua,potato
+ID_1710108888891,Nicaragua,pepper
+ID_1710176769262,Panamá,coffee
+ID_1710188371968,El Salvador,default
+ID_1710188494381,El Salvador,default
+ID_1710188592755,El Salvador,default
+ID_1710188827230,El Salvador,tomato
+ID_1710189294712,El Salvador,tomato
+ID_1710191839798,El Salvador,tomato
+ID_1710191924051,El Salvador,tomato
+ID_1710192193545,El Salvador,cucumber
+ID_1710218890866,Nicaragua,pepper
+ID_1710219047001,Nicaragua,tomato
+ID_1710219205421,Nicaragua,tomato
+ID_1710219486496,Nicaragua,tomato
+ID_1710219670203,Nicaragua,tomato
+ID_1710219850805,Nicaragua,tomato
+ID_1710259127717,Panamá,potato
+ID_1710259264848,Panamá,cabbage
+ID_1710259516718,Panamá,potato
+ID_1710259626086,Panamá,cabbage
+ID_1710265511682,El Salvador,rice
+ID_1710279023549,El Salvador,maize
+ID_1710279402293,El Salvador,cucumber
+ID_1710279538890,El Salvador,pepper
+ID_1710293165722,Honduras,onion
+ID_1710330887263,El Salvador,tomato
+ID_1710427966730,El Salvador,maize
+ID_1710429934696,El Salvador,tomato
+ID_1710430830384,El Salvador,pepper
+ID_1710434844541,El Salvador,cucumber
+ID_1710447807965,Panamá,maize
+ID_1710471084945,Costa Rica,coffee
+ID_1710471263080,Costa Rica,coffee
+ID_1710471577657,Costa Rica,coffee
+ID_1710687819156,Honduras,bean
+ID_1710852831454,Panamá,onion
+ID_1710852977792,Panamá,tomato
+ID_1711036950601,Panamá,coffee
+ID_1711038621933,Panamá,coffee
+ID_1711307829665,Nicaragua,cucumber
+ID_1711380186735,Guatemala,pepper
+ID_1711507647293,Panamá,onion
+ID_1711558441531,Honduras,onion
+ID_1712027770452,Honduras,tomato
+ID_1712027770452,Honduras,tomato
+ID_1712028148704,Honduras,tomato
+ID_1712063488870,El Salvador,maize
+ID_1712066808763,Panamá,onion
+ID_1712066939146,Panamá,onion
+ID_1712067022619,Panamá,onion
+ID_1712067595302,Panamá,onion
+ID_1712067737461,Panamá,onion
+ID_1712067841815,Panamá,onion
+ID_1712067955075,Panamá,onion
+ID_1712068001858,Panamá,onion
+ID_1712156019986,Panamá,tomato
+ID_1712174549106,Panamá,tomato
+ID_1712174671917,Panamá,tomato
+ID_1712253261896,Honduras,onion
+ID_1712253718793,Guatemala,pepper
+ID_1712254310782,Honduras,cucumber
+ID_1712341679433,Honduras,tomato
+ID_1712341878680,Honduras,tomato
+ID_1712584470379,Nicaragua,tomato
+ID_1712584470379,Nicaragua,tomato

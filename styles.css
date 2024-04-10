@@ -1,0 +1,102 @@
+/* Estilo general de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Estilos para formularios, selecciones y botones */
+label {
+    margin-right: 10px;
+}
+
+select, button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+select:focus, button:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor para las imágenes y estilos de las cajas de imagen */
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.img-box {
+    width: calc(50% - 10px);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.img-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    resize: vertical;
+    margin-top: 10px;
+}
+
+/* Estilo para el banner de confirmación */
+.banner {
+    background-color: #4CAF50; /* Color verde para éxito */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .img-box {
+        width: 100%;
+    }
+}

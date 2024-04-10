@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Cultivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visualizador de Cultivos</h1>
+        <div>
+            <label for="evaluador">Evaluador:</label>
+            <select id="evaluador">
+                <option value="Juan Carlos Toledo">Juan Carlos Toledo</option>
+                <option value="Ovidio del Cid">Ovidio del Cid</option>
+                <option value="Juan Pablo García">Juan Pablo García</option>
+            </select>
+
+            <label for="pais">País:</label>
+            <select id="pais">
+                <option value="default">Seleccione un País</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Colombia">Colombia</option>
+            </select>
+
+            <button id="accion">Filtrar</button>
+        </div>
+
+        <div id="img-container" class="img-container">
+            <!-- Las imágenes junto a sus casillas de comentario y botones de "Guardar" se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
