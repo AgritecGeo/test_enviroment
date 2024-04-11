@@ -15,7 +15,7 @@ function cargarImagenesDesdeGCP() {
         .then(data => {
             // Normaliza la respuesta para asegurarse de que siempre sea un array
             const normalizedData = Array.isArray(data) ? data : [data];
-            console.log(data);
+            console.log('Normalized data:', normalizedData);
             window.imagenes = normalizedData;
             mostrarImagenes(normalizedData);
         })
@@ -30,7 +30,6 @@ function mostrarImagenes(data) {
     data.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        // Proporciona una imagen por defecto si imageURL es undefined
         const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150';
         imgDiv.innerHTML = `
             <div>Nombre: ${imagen.nombre || 'Desconocido'}</div>
