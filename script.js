@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Llamar a la función cargarImagenesDesdeGCP cuando el contenido del DOM esté completamente cargado
     cargarImagenesDesdeGCP();
     document.getElementById('accion').addEventListener('click', filtrarPorPais);
 });
@@ -9,7 +8,8 @@ function cargarImagenesDesdeGCP() {
     fetch('https://us-central1-agritecgeo-analytics.cloudfunctions.net/plantix-evaluate-photo')
         .then(response => response.json())
         .then(data => {
-            // Suponiendo que 'data' contiene un array de objetos con la información de las imágenes
+            // Guardar imágenes globalmente si se necesita para filtrar
+            window.imagenes = data;
             mostrarImagenes(data);
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
@@ -49,23 +49,30 @@ function guardarComentario(index) {
     const evaluador = document.getElementById('evaluador').value;
     const fecha = new Date().toISOString();
 
-    const datosCSV = `Nombre_Imagen,País,Fecha,Comentario,Evaluador\n"${imagen.ID}","${imagen.pais}","${fecha}","${comentario}","${evaluador}"`;
+    const datosParaEnviar = {
+        image_id: imagen.id,
+        pais: imagen.pais,
+        fecha: fecha,
+        comment: comentario,
+        evaluador: evaluador
+    };
 
-    fetch('https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Plantix/Evaluación%20de%20Respuestas/', {
+    // Cambia esta URL a la de tu función específica para guardar comentarios en GCP
+    fetch('https://us-central1-agritecgeo-analytics.cloudfunctions.net/plantix-save-comment', {
         method: 'POST',
-        body: datosCSV,
+        body: JSON.stringify(datosParaEnviar),
         headers: {
-            'Content-Type': 'text/csv'
+            'Content-Type': 'application/json'
         }
     })
     .then(response => {
         if (response.ok) {
-            console.log('Evaluación guardada correctamente.');
-            document.getElementById('banner').style.display = 'block'; // Suponiendo que existe un banner de confirmación
-            setTimeout(() => document.getElementById('banner').style.display = 'none', 3000); // Ocultar el banner después de 3 segundos
+            console.log('Comentario guardado correctamente.');
+            document.getElementById('banner').style.display = 'block'; // Asumiendo que existe un banner de confirmación
+            setTimeout(() => document.getElementById('banner').style.display = 'none', 3000);
         } else {
-            console.error('Error al guardar la evaluación.');
+            console.error('Error al guardar el comentario.');
         }
     })
-    .catch(err => console.error('Error al guardar la evaluación:', err));
+    .catch(err => console.error('Error al guardar el comentario:', err));
 }
