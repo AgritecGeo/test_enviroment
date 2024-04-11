@@ -29,14 +29,14 @@ function parseCSV(csvText) {
 function mostrarImagenes(data) {
     const imgContainer = document.getElementById('img-container');
     imgContainer.innerHTML = '';
-    window.imagenesFiltradas = data; // Almacenar las imágenes filtradas para su uso en guardarComentario.
+    window.imagenesFiltradas = data.filter(imagen => !imagen.evaluador); // Filtrar solo las imágenes que no han sido evaluadas
 
-    data.forEach((imagen, index) => {
+    window.imagenesFiltradas.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        const imageURL = `https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Plantix/Imagenes/imagen_${imagen['id']}.png`;
+        const imageURL = `https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Plantix/Imagenes/imagen_${imagen['ID']}.png`;
         imgDiv.innerHTML = `
-            <div>Nombre: imagen_${imagen['id']}.png</div>
+            <div>Nombre: imagen_${imagen['ID']}.png</div>
             <div>País: ${imagen['pais']}</div>
             <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="Imagen" class="image"></a>
             <textarea placeholder="Añade un comentario..."></textarea>
@@ -48,25 +48,33 @@ function mostrarImagenes(data) {
 
 function filtrarPorPais() {
     const paisSeleccionado = document.getElementById('pais').value;
-    const imagenesFiltradas = window.imagenes.filter(imagen => imagen.pais === paisSeleccionado || paisSeleccionado === 'default');
-    mostrarImagenes(imagenesFiltradas);
+    const imagenesFiltradasPorPais = window.imagenesFiltradas.filter(imagen => imagen.pais === paisSeleccionado || paisSeleccionado === 'default');
+    mostrarImagenes(imagenesFiltradasPorPais);
 }
 
 function guardarComentario(index) {
-    const imagen = window.imagenesFiltradas ? window.imagenesFiltradas[index] : window.imagenes[index];
+    const imagen = window.imagenesFiltradas[index];
     const comentario = document.querySelectorAll('.img-box')[index].querySelector('textarea').value;
     const evaluador = document.getElementById('evaluador').value;
     const fecha = new Date().toISOString();
 
-    const datosCSV = `Nombre Imagen,País,Fecha,Comentario,Evaluador\n"${imagen['id']}","${imagen['pais']}","${fecha}","${comentario}","${evaluador}"`;
+    const datosCSV = `Nombre_Imagen,País,Fecha,Comentario,Evaluador\n"${imagen['ID']}","${imagen['pais']}","${fecha}","${comentario}","${evaluador}"`;
 
-    const blob = new Blob([datosCSV], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `evaluacion_${imagen['id']}.csv`; // Asegura que el nombre del archivo sea único
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    fetch('https://filedn.com/lRAMUKU4tN3HUnQqI5npg4H/Plantix/Evaluación%20de%20Respuestas/', {
+        method: 'POST',
+        body: datosCSV,
+        headers: {
+            'Content-Type': 'text/csv'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Evaluación guardada correctamente.');
+            // Mostrar banner de confirmación
+            document.getElementById('banner').style.display = 'block';
+        } else {
+            console.error('Error al guardar la evaluación.');
+        }
+    })
+    .catch(err => console.error('Error al guardar la evaluación:', err));
 }
