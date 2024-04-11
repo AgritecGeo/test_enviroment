@@ -6,11 +6,19 @@ document.addEventListener('DOMContentLoaded', function() {
 // Función para cargar las imágenes desde la API en GCP
 function cargarImagenesDesdeGCP() {
     fetch('https://us-central1-agritecgeo-analytics.cloudfunctions.net/plantix-evaluate-photo')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
-            // Guardar imágenes globalmente si se necesita para filtrar
-            window.imagenes = data;
-            mostrarImagenes(data);
+            if (Array.isArray(data)) {
+                window.imagenes = data;
+                mostrarImagenes(data);
+            } else {
+                console.error('Recibido un objeto no iterable:', data);
+            }
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
 }
@@ -23,7 +31,7 @@ function mostrarImagenes(data) {
     data.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        const imageURL = imagen.url_imagen; // Asume que cada 'imagen' tiene una propiedad 'url_imagen'
+        const imageURL = imagen.url_imagen;
         imgDiv.innerHTML = `
             <div>Nombre: ${imagen.nombre}</div>
             <div>País: ${imagen.pais}</div>
@@ -57,7 +65,6 @@ function guardarComentario(index) {
         evaluador: evaluador
     };
 
-    // Cambia esta URL a la de tu función específica para guardar comentarios en GCP
     fetch('https://us-central1-agritecgeo-analytics.cloudfunctions.net/plantix-save-comment', {
         method: 'POST',
         body: JSON.stringify(datosParaEnviar),
@@ -68,11 +75,14 @@ function guardarComentario(index) {
     .then(response => {
         if (response.ok) {
             console.log('Comentario guardado correctamente.');
-            document.getElementById('banner').style.display = 'block'; // Asumiendo que existe un banner de confirmación
+            document.getElementById('banner').style.display = 'block';
             setTimeout(() => document.getElementById('banner').style.display = 'none', 3000);
         } else {
-            console.error('Error al guardar el comentario.');
+            throw new Error('Error al guardar el comentario.');
         }
     })
-    .catch(err => console.error('Error al guardar el comentario:', err));
+    .catch(err => {
+        console.error('Error al guardar el comentario:', err);
+        // Considera agregar feedback visual para el usuario aquí también.
+    });
 }
