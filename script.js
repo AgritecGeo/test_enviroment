@@ -13,28 +13,26 @@ function cargarImagenesDesdeGCP() {
             return response.json();
         })
         .then(data => {
-            // Normaliza la respuesta para asegurarse de que siempre sea un array
-            const normalizedData = Array.isArray(data) ? data : [data];
-            console.log('Normalized data:', normalizedData);
-            window.imagenes = normalizedData;
-            mostrarImagenes(normalizedData);
+            // Asume que data es el array directamente
+            window.imagenes = data; // Almacenar el array en una variable global para uso futuro
+            mostrarImagenes(window.imagenes);
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
 }
 
 // Función para mostrar las imágenes en la página
-function mostrarImagenes(data) {
+function mostrarImagenes(imagenes) {
     const imgContainer = document.getElementById('img-container');
     imgContainer.innerHTML = '';
 
-    data.forEach((imagen, index) => {
+    imagenes.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150';
+        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150'; // Usa una imagen por defecto si no hay URL
         imgDiv.innerHTML = `
             <div>Nombre: ${imagen.nombre || 'Desconocido'}</div>
             <div>País: ${imagen.pais || 'Desconocido'}</div>
-            <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="Imagen" class="image"></a>
+            <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="${imagen.nombre || 'Imagen'}" class="image"></a>
             <textarea placeholder="Añade un comentario..."></textarea>
             <button onclick="guardarComentario(${index})">Guardar</button>
         `;
