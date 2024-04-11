@@ -13,18 +13,11 @@ function cargarImagenesDesdeGCP() {
             return response.json();
         })
         .then(data => {
-            // Verificar directamente si recibimos el array o necesitamos extraerlo de un objeto
-            console.log("Data received from API:", data); // Log para ver la estructura de la respuesta
-
-            // Asumimos que la respuesta directamente es el array necesario
-            // Si no es un array, se intenta convertir con una verificación adicional
-            if (!Array.isArray(data)) {
-                console.error("Expected an array, but received:", data);
-                data = []; // Asegurarse de que sea manejable incluso si hay un error
-            }
-
-            window.imagenes = data;
-            mostrarImagenes(data);
+            // Normaliza la respuesta para asegurarse de que siempre sea un array
+            // Incluso si la respuesta es un objeto único, lo convertimos en un array
+            const normalizedData = Array.isArray(data) ? data : [data];
+            window.imagenes = normalizedData;
+            mostrarImagenes(normalizedData);
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
 }
