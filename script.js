@@ -29,10 +29,11 @@ function mostrarImagenes(data) {
     data.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        const imageURL = imagen.url_imagen;
+        // Proporciona una imagen por defecto si imageURL es undefined
+        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150';
         imgDiv.innerHTML = `
-            <div>Nombre: ${imagen.nombre}</div>
-            <div>País: ${imagen.pais}</div>
+            <div>Nombre: ${imagen.nombre || 'Desconocido'}</div>
+            <div>País: ${imagen.pais || 'Desconocido'}</div>
             <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="Imagen" class="image"></a>
             <textarea placeholder="Añade un comentario..."></textarea>
             <button onclick="guardarComentario(${index})">Guardar</button>
@@ -85,6 +86,5 @@ function guardarComentario(index) {
     })
     .catch(err => {
         console.error('Error al guardar el comentario:', err);
-        // Consider adding user feedback here as well.
     });
 }
