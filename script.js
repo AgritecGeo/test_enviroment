@@ -13,26 +13,27 @@ function cargarImagenesDesdeGCP() {
             return response.json();
         })
         .then(data => {
-            // Asume que data es el array directamente
-            window.imagenes = data; // Almacenar el array en una variable global para uso futuro
-            mostrarImagenes(window.imagenes);
+            // Asegurarse de que la respuesta es un array
+            const normalizedData = Array.isArray(data) ? data : [data];
+            window.imagenes = normalizedData;
+            mostrarImagenes(normalizedData);
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
 }
 
 // Función para mostrar las imágenes en la página
-function mostrarImagenes(imagenes) {
+function mostrarImagenes(data) {
     const imgContainer = document.getElementById('img-container');
     imgContainer.innerHTML = '';
 
-    imagenes.forEach((imagen, index) => {
+    data.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150'; // Usa una imagen por defecto si no hay URL
+        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150'; // Usar imagen por defecto si falta la URL
         imgDiv.innerHTML = `
             <div>Nombre: ${imagen.nombre || 'Desconocido'}</div>
             <div>País: ${imagen.pais || 'Desconocido'}</div>
-            <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="${imagen.nombre || 'Imagen'}" class="image"></a>
+            <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="Imagen" class="image"></a>
             <textarea placeholder="Añade un comentario..."></textarea>
             <button onclick="guardarComentario(${index})">Guardar</button>
         `;
@@ -43,10 +44,6 @@ function mostrarImagenes(imagenes) {
 // Función para filtrar imágenes por país seleccionado en un dropdown
 function filtrarPorPais() {
     const paisSeleccionado = document.getElementById('pais').value;
-    if (!window.imagenes) {
-        console.error('No hay imágenes disponibles para filtrar');
-        return;
-    }
     const imagenesFiltradas = window.imagenes.filter(imagen => imagen.pais === paisSeleccionado || paisSeleccionado === 'default');
     mostrarImagenes(imagenesFiltradas);
 }
