@@ -13,35 +13,29 @@ function cargarImagenesDesdeGCP() {
             return response.json();
         })
         .then(data => {
-            // Normaliza la respuesta para asegurarse de que siempre sea un array
-            // Incluso si la respuesta es un objeto único, lo convertimos en un array
-            const normalizedData = Array.isArray(data) ? data : [data];
-            window.imagenes = normalizedData;
-            mostrarImagenes(normalizedData);
+            // Asegúrate de que data es un array y utiliza esos datos para mostrar imágenes
+            const imagenes = Array.isArray(data) ? data : [];
+            window.imagenes = imagenes;  // Almacenar globalmente para uso en filtrado
+            mostrarImagenes(imagenes);
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
 }
 
 // Función para mostrar las imágenes en la página
-function mostrarImagenes(data) {
+function mostrarImagenes(imagenes) {
     const imgContainer = document.getElementById('img-container');
     imgContainer.innerHTML = '';
 
-    if (!Array.isArray(data)) {
-        console.error('Provided data is not an array:', data);
-        return; // Salir de la función si no se proporciona un array
-    }
-
-    data.forEach((imagen, index) => {
+    imagenes.forEach(imagen => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150';
+        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150'; // Proporcionar una imagen por defecto
         imgDiv.innerHTML = `
             <div>Nombre: ${imagen.nombre || 'Desconocido'}</div>
             <div>País: ${imagen.pais || 'Desconocido'}</div>
-            <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="Imagen" class="image"></a>
+            <a href="${imageURL}" target="_blank"><img src="${imageURL}" alt="Imagen de ${imagen.cultivo || 'Cultivo Desconocido'}" class="image"></a>
             <textarea placeholder="Añade un comentario..."></textarea>
-            <button onclick="guardarComentario(${index})">Guardar</button>
+            <button onclick="guardarComentario('${imagen.id}')">Guardar</button>
         `;
         imgContainer.appendChild(imgDiv);
     });
@@ -50,24 +44,20 @@ function mostrarImagenes(data) {
 // Función para filtrar imágenes por país seleccionado en un dropdown
 function filtrarPorPais() {
     const paisSeleccionado = document.getElementById('pais').value;
-    if (!window.imagenes) {
-        console.error('No hay imágenes disponibles para filtrar');
-        return;
-    }
     const imagenesFiltradas = window.imagenes.filter(imagen => imagen.pais === paisSeleccionado || paisSeleccionado === 'default');
     mostrarImagenes(imagenesFiltradas);
 }
 
 // Función para guardar el comentario de una imagen específica
-function guardarComentario(index) {
-    const imagen = window.imagenes[index];
-    const comentario = document.querySelectorAll('.img-box')[index].querySelector('textarea').value;
+function guardarComentario(imageId) {
+    const imgBox = document.querySelector(`button[onclick="guardarComentario('${imageId}')"]`).parentNode;
+    const comentario = imgBox.querySelector('textarea').value;
     const evaluador = document.getElementById('evaluador').value;
     const fecha = new Date().toISOString();
 
     const datosParaEnviar = {
-        image_id: imagen.id,
-        pais: imagen.pais,
+        image_id: imageId,
+        pais: imgBox.querySelector('div:nth-child(2)').textContent.replace('País: ', ''),
         fecha: fecha,
         comment: comentario,
         evaluador: evaluador
