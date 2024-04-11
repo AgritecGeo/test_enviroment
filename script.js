@@ -15,6 +15,7 @@ function cargarImagenesDesdeGCP() {
         .then(data => {
             // Normaliza la respuesta para asegurarse de que siempre sea un array
             const normalizedData = Array.isArray(data) ? data : [data];
+            console.log(data);
             window.imagenes = normalizedData;
             mostrarImagenes(normalizedData);
         })
