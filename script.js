@@ -13,12 +13,10 @@ function cargarImagenesDesdeGCP() {
             return response.json();
         })
         .then(data => {
-            if (Array.isArray(data)) {
-                window.imagenes = data;
-                mostrarImagenes(data);
-            } else {
-                console.error('Recibido un objeto no iterable:', data);
-            }
+            // Normaliza la respuesta para asegurarse de que siempre sea un array
+            const normalizedData = Array.isArray(data) ? data : [data];
+            window.imagenes = normalizedData;
+            mostrarImagenes(normalizedData);
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
 }
@@ -26,7 +24,7 @@ function cargarImagenesDesdeGCP() {
 // Función para mostrar las imágenes en la página
 function mostrarImagenes(data) {
     const imgContainer = document.getElementById('img-container');
-    imgContainer.innerHTML = ''; // Limpia el contenedor antes de añadir nuevas imágenes
+    imgContainer.innerHTML = '';
 
     data.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
@@ -46,6 +44,10 @@ function mostrarImagenes(data) {
 // Función para filtrar imágenes por país seleccionado en un dropdown
 function filtrarPorPais() {
     const paisSeleccionado = document.getElementById('pais').value;
+    if (!window.imagenes) {
+        console.error('No hay imágenes disponibles para filtrar');
+        return;
+    }
     const imagenesFiltradas = window.imagenes.filter(imagen => imagen.pais === paisSeleccionado || paisSeleccionado === 'default');
     mostrarImagenes(imagenesFiltradas);
 }
@@ -83,6 +85,6 @@ function guardarComentario(index) {
     })
     .catch(err => {
         console.error('Error al guardar el comentario:', err);
-        // Considera agregar feedback visual para el usuario aquí también.
+        // Consider adding user feedback here as well.
     });
 }
