@@ -13,10 +13,18 @@ function cargarImagenesDesdeGCP() {
             return response.json();
         })
         .then(data => {
-            // Asegurarse de que la respuesta es un array
-            const normalizedData = Array.isArray(data) ? data : [data];
-            window.imagenes = normalizedData;
-            mostrarImagenes(normalizedData);
+            // Verificar directamente si recibimos el array o necesitamos extraerlo de un objeto
+            console.log("Data received from API:", data); // Log para ver la estructura de la respuesta
+
+            // Asumimos que la respuesta directamente es el array necesario
+            // Si no es un array, se intenta convertir con una verificación adicional
+            if (!Array.isArray(data)) {
+                console.error("Expected an array, but received:", data);
+                data = []; // Asegurarse de que sea manejable incluso si hay un error
+            }
+
+            window.imagenes = data;
+            mostrarImagenes(data);
         })
         .catch(err => console.error('Error al cargar las imágenes desde GCP:', err));
 }
@@ -26,10 +34,15 @@ function mostrarImagenes(data) {
     const imgContainer = document.getElementById('img-container');
     imgContainer.innerHTML = '';
 
+    if (!Array.isArray(data)) {
+        console.error('Provided data is not an array:', data);
+        return; // Salir de la función si no se proporciona un array
+    }
+
     data.forEach((imagen, index) => {
         const imgDiv = document.createElement('div');
         imgDiv.classList.add('img-box');
-        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150'; // Usar imagen por defecto si falta la URL
+        const imageURL = imagen.url_imagen || 'https://via.placeholder.com/150';
         imgDiv.innerHTML = `
             <div>Nombre: ${imagen.nombre || 'Desconocido'}</div>
             <div>País: ${imagen.pais || 'Desconocido'}</div>
@@ -44,6 +57,10 @@ function mostrarImagenes(data) {
 // Función para filtrar imágenes por país seleccionado en un dropdown
 function filtrarPorPais() {
     const paisSeleccionado = document.getElementById('pais').value;
+    if (!window.imagenes) {
+        console.error('No hay imágenes disponibles para filtrar');
+        return;
+    }
     const imagenesFiltradas = window.imagenes.filter(imagen => imagen.pais === paisSeleccionado || paisSeleccionado === 'default');
     mostrarImagenes(imagenesFiltradas);
 }
